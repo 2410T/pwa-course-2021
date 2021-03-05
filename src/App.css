@@ -8,6 +8,26 @@
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  .App {
+    background-image: url(OrangeBg.jpg) no-repeat center; 
+    background-size: cover;
+    width: auto;
+    position: relative;
+    background-color: rgb(255, 207, 117);
+  }
+}
+
+@media (min-width: 769px) and (max-width:1024px) {
+  .App {
+    background-image: url(OrangeBg.jpg) no-repeat center; 
+    background-size: cover;
+    width: auto;
+    position: relative;
+    background-color: rgb(0, 81, 255);
+  }
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
