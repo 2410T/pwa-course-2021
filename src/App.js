@@ -1,45 +1,20 @@
 import './App.css';
-import {useState} from 'react';
+import { Link } from 'react-router-dom';
+import Chatbox from './Chatbox';
 
-function App() {
-
-  const [text, setText] = useState("");
-  const [lines, setLines] = useState([
-    "Hello"])
-
-  const onTextChange = (event) => {
-    setText(event.target.value);
-  }
-
-  const onSend = () =>{
-    setLines([...lines, text]);
-    setText("");
-  }
-
-  const keyPress = (event) => {
-    if (event.which === 13){
-      onSend();
-  }
-}
-
+function App(children) 
+{
   return (
-    <div className="App">
+    <div className="App col-6">
       <div className="App-header">
-      </div>
-      <div className="App-chatroom">
-        {
-          lines.map(x => {
-        return <div className="App-chatroom-text">
-          {x}
+        <Link to="/friend-list">
+          <button>
+            Friend List
+          </button>
+        </Link>
         </div>
-          })
-        }
-      </div>
-      <div className="App-textbox">
-        <input type="text" className="App-textbox-input" 
-        value={text} onChange={onTextChange} onKeyPress={keyPress}/>
-        
-        <div className="App-textbox-send">Send!</div>
+        <div className="App-Content">
+          <FriendList />
       </div>
     </div>
   );
