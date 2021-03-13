@@ -44,10 +44,8 @@
   color: rgb(255, 255, 255);
 }
 
-.App-chatroom {
-  flex: 12;
-  background-color: rgb(88, 88, 88);
-}
+.App-content {
+  flex: 12;}
 
 .App-chatroom-text {
   margin: 8px;
